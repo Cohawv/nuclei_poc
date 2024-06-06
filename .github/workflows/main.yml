@@ -5,8 +5,12 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 12 * * *'
+    - cron: '0 */6 * * *'
 
+permissions:
+  contents: read
+  issues: write
+  
 jobs:
   build:
     runs-on: ubuntu-latest
