@@ -1,23 +1,23 @@
-id: wordpress-fluent-smtp
+id: wordpress-extendify
 
 info:
-  name: FluentSMTP – WP SMTP Plugin with Amazon SES, SendGrid, MailGun, Postmark, Google and Any SMTP Provider Detection
+  name: Extendify Detection
   author: ricardomaia
   severity: info
   reference:
-    - https://wordpress.org/plugins/fluent-smtp/
+    - https://wordpress.org/plugins/extendify/
   metadata:
-    plugin_namespace: fluent-smtp
-    wpscan: https://wpscan.com/plugin/fluent-smtp
+    plugin_namespace: extendify
+    wpscan: https://wpscan.com/plugin/extendify
   tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
     path:
-      - "{{BaseURL}}/wp-content/plugins/fluent-smtp/readme.txt"
+      - "{{BaseURL}}/wp-content/plugins/extendify/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/fluent-smtp.txt
+      last_version: helpers/wordpress/plugins/extendify.txt
 
     extractors:
       - type: regex
@@ -46,4 +46,3 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100f1f543d798adc2ab303ceb820e2ae24a256276cbbb609e4dba2979bdbd98ec0402204cc2eb58427732e99527ad3f060c30b699e1bd3b181cedccd9aaf7764aa3acf8:922c64590222798bb761d5b6d8e72950
