@@ -1,23 +1,23 @@
-id: wordpress-extendify
+id: wordpress-woocommerce-legacy-rest-api
 
 info:
-  name: Extendify Detection
+  name: WooCommerce Legacy REST API Detection
   author: ricardomaia
   severity: info
   reference:
-    - https://wordpress.org/plugins/extendify/
+    - https://wordpress.org/plugins/woocommerce-legacy-rest-api/
   metadata:
-    plugin_namespace: extendify
-    wpscan: https://wpscan.com/plugin/extendify
+    plugin_namespace: woocommerce-legacy-rest-api
+    wpscan: https://wpscan.com/plugin/woocommerce-legacy-rest-api
   tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
     path:
-      - "{{BaseURL}}/wp-content/plugins/extendify/readme.txt"
+      - "{{BaseURL}}/wp-content/plugins/woocommerce-legacy-rest-api/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/extendify.txt
+      last_version: helpers/wordpress/plugins/woocommerce-legacy-rest-api.txt
 
     extractors:
       - type: regex
@@ -46,3 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4a0a00473045022100a78a44434d76abe5af5dabb5b8672cfe4a03bd4b43e0e1ed3f32b95d954eda2502200c7bf9587a2db4beb751731dcf001d489bc74f33db923647b7ffef961ad834cf:922c64590222798bb761d5b6d8e72950
