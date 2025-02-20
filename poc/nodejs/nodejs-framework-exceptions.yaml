@@ -1,0 +1,33 @@
+id: nodejs-framework-exceptions
+
+info:
+  name: Node.js Framework Exceptions
+  author: Aayush Dhakal
+  severity: info
+  description: Detects suspicious Node.js framework exceptions that could indicate exploitation attempts
+  reference:
+    - https://expressjs.com/en/guide/error-handling.html
+    - https://nodejs.org/en/docs/guides
+  tags: file,logs,nodejs
+
+file:
+  - extensions:
+      - all
+
+    extractors:
+      - type: regex
+        name: exception
+        part: body
+        regex:
+          - 'TypeError'
+          - 'ReferenceError'
+          - 'SyntaxError'
+          - 'ValidationError'
+          - 'UnauthorizedError'
+          - 'ForbiddenError'
+          - 'NotFoundError'
+          - 'InternalServerError'
+          - 'BadRequestError'
+          - 'MongoError'
+          - 'SequelizeDatabaseError'
+# digest: 490a0046304402202a61b27f7d4429d965076723a865867bd11868e107c51aea5df205e528e23f3f02207e9d6375a09785534b18c0e7a55b3de2b015fe66b3b2fa087ee568529dba3941:922c64590222798bb761d5b6d8e72950
