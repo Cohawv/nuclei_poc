@@ -1,24 +1,23 @@
-id: wordpress-google-listings-and-ads
+id: wordpress-extendify
 
 info:
-  name: Google Listings & Ads Detection
+  name: Extendify Detection
   author: ricardomaia
   severity: info
   reference:
-    - https://wordpress.org/plugins/google-listings-and-ads/
+    - https://wordpress.org/plugins/extendify/
   metadata:
-    plugin_namespace: google-listings-and-ads
-    wpscan: https://wpscan.com/plugin/google-listings-and-ads
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    plugin_namespace: extendify
+    wpscan: https://wpscan.com/plugin/extendify
+  tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
-
     path:
-      - "{{BaseURL}}/wp-content/plugins/google-listings-and-ads/readme.txt"
+      - "{{BaseURL}}/wp-content/plugins/extendify/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/google-listings-and-ads.txt
+      last_version: helpers/wordpress/plugins/extendify.txt
 
     extractors:
       - type: regex
@@ -47,3 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 490a00463044022069049e209f0c252ec1d6c77e997ebcffec9db9adfa25ca73601a885c981001f70220039c2d2a62080d04542dfaaff553415786d1b6368fd6104ee32bf4acbf1eff99:922c64590222798bb761d5b6d8e72950
