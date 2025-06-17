@@ -1,23 +1,23 @@
-id: wordpress-blocksy-companion
+id: wordpress-backuply
 
 info:
-  name: Blocksy Companion Detection
+  name: Backuply – Backup, Restore, Migrate and Clone Detection
   author: ricardomaia
   severity: info
   reference:
-    - https://wordpress.org/plugins/blocksy-companion/
+    - https://wordpress.org/plugins/backuply/
   metadata:
-    plugin_namespace: blocksy-companion
-    wpscan: https://wpscan.com/plugin/blocksy-companion
+    plugin_namespace: backuply
+    wpscan: https://wpscan.com/plugin/backuply
   tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
     path:
-      - "{{BaseURL}}/wp-content/plugins/blocksy-companion/readme.txt"
+      - "{{BaseURL}}/wp-content/plugins/backuply/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/blocksy-companion.txt
+      last_version: helpers/wordpress/plugins/backuply.txt
 
     extractors:
       - type: regex
@@ -46,3 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4a0a004730450220198ca3c8df660aae42e36dd1ef5ebffc9a05b930205bf9d5dc2939b432591e930221008a09eb7ad4f2966582e495a8ce05ecaf224e1831f5d418fc030eee9c70a26ef0:922c64590222798bb761d5b6d8e72950
